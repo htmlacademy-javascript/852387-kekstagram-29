@@ -3,6 +3,12 @@ function checkStringLength (str, length) {
   return str.length <= length;
 }
 
-console.log('ответ = ', checkStringLength('проверяемая строка', 20));
-console.log(checkStringLength('проверяемая строка', 18));
-console.log(checkStringLength('проверяемая строка', 10));
+// Функция для проверки, является ли строка палиндромом.
+function checkStringPolyndrom (str) {
+  const newStr = str.replaceAll(' ', '').toLowerCase();
+  let result = '';
+  for (let i = newStr.length - 1; i >= 0; i--) {
+    result += newStr[i];
+  }
+  return result === newStr;
+}
